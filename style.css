@@ -1,0 +1,16 @@
+#header {
+    margin-top: 2rem;
+}
+
+#trainInputForm {
+    margin-bottom: 2rem;
+}
+body{
+    background-color:  #586A6A;
+}
+.jumbotron{
+    background-color: #DCDFE1;
+}
+label {
+    color: #D4CBE5;
+}

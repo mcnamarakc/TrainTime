@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Times</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Train.ico" sizes="32x32" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="header" class="row">
+            <div class="col-12">
+                <div class="jumbotron jumbotron-fluid rounded">
+                    <div class="container">
+                        <h1 class="display-4">Train Times</h1>
+                        <p class="lead">Keep yourself on track.</p>
+                        <p id="current-time"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped rounded" style="background: #D4D5D5">
+                    <thead class="thead-dark rounded">
+                        <tr>
+                            <th scope="col">Train Name:</th>
+                            <th scope="col">Destination:</th>
+                            <th scope="col">First Train Time (military time):</th>
+                            <th scope="col">Frequency(min):</th>
+                            <th scope="col" id="nxtArrival">Next Arrival:</th>
+                            <th scope="col" id="minAway">Minutes Away:</th>                        
+                        </tr>
+                    </thead>
+                    <tbody id="trainTable">                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                
+            </div>
+        </div>
+        <div id="trainInputForm" class="row">
+            <div class="col-12">
+                <form>
+                    <div class="form-group">
+                        <label for="trainNameForm">Train Name</label>
+                        <input type="text" class="form-control" id="trainNameForm" placeholder="Midnight train">
+                    </div>
+                    <div class="form-group">
+                        <label for="destinationForm">Destination</label>
+                        <input type="text" class="form-control" id="destinationForm" placeholder="Anywhere">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstTrainForm">First Train Time (HHmm military time)</label>
+                        <input type="text" class="form-control" id="firstTrainForm" placeholder="0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequencyForm">Frequency (minutes)</label>
+                        <input type="text" class="form-control" id="frequencyForm" placeholder="30">
+                    </div>
+                   <button type="submit" class="btn btn-info" id="addTrain">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
